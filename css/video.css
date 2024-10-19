@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    background-image: url(/images/bg_ourtime.jpg);
+    background-size: cover; /* Đảm bảo hình nền phủ đầy màn hình */
+}
+
+.video-container {
+    width: 95%;
+    height: auto; /* Thay đổi chiều cao tự động */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền khi hover */
+}
+
+video {
+    width: 25%;
+    object-fit: contain;
+    border: 8px solid #0056b3; /* Viền cho video */
+    border-radius: 10px; /* Bo góc cho video */
+}
