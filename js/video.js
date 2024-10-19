@@ -1,6 +1,6 @@
 const videoSources = [
-    "/video/1.mp4",
-    "/video/2.mp4", // Đường dẫn đến video thứ hai
+    "1.mp4",
+    "2.mp4", // Đường dẫn đến video thứ hai
 ];
 
 let currentVideoIndex = 0; // Chỉ số video hiện tại
