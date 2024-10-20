@@ -31,7 +31,9 @@
 	</head>
 
 	<body>
+
 	<audio id="player" src="nen.mp3" autoplay loop></audio>
+
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -158,16 +160,6 @@
 	<script src="js/main.js"></script>
 
 	<script>
-
-		document.addEventListener('DOMContentLoaded', function() {
-			var player = document.getElementById('player');
-	
-			// Cố gắng phát nhạc tự động ngay khi trang tải
-			player.play().catch(function(error) {
-				console.log('Autoplay bị chặn: ', error);
-			});
-		});
-
 		var targetDate = new Date('2024-10-20T00:00:00+07:00'); // UTC+7
 	
 		simplyCountdown('.simply-countdown-one', {

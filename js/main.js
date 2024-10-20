@@ -214,6 +214,7 @@
 	};
 
 	
+	
 	$(function(){
 		mobileMenuOutsideClick();
 		parallax();
@@ -230,6 +231,13 @@
 
 
 }());
+
+$(document).one('click keydown touchstart', function() {
+    var player = document.getElementById('player');
+    player.play().catch(function(error) {
+        console.log('Autoplay bị chặn: ', error);
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     const calendarContainer = document.querySelector('.calendar-days');
