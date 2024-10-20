@@ -1,5 +1,5 @@
 const countdown = () => {
-    const countDate = new Date("Oct 20, 2024 00:00:00").getTime(); // Ngày mục tiêu
+    const countDate = new Date("Oct 20, 2024 19:00:00").getTime(); // Ngày mục tiêu
     const now = new Date().getTime(); // Thời gian hiện tại
     const gap = countDate - now; // Tính khoảng cách thời gian
 

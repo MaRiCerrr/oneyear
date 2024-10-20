@@ -33,7 +33,11 @@
 	<body>
 
 	<div class="fh5co-loader"></div>
-	
+
+	<audio id="player" autoplay loop>
+		<source src="nen.mp3" type="audio/mp3" />
+	</audio>
+
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -135,10 +139,6 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
-	<audio id="player" autoplay loop>
-		<source src="nen.mp3" type="audio/mp3" />
-	</audio>
-	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -164,6 +164,16 @@
 	<script src="js/main.js"></script>
 
 	<script>
+		
+		document.addEventListener('DOMContentLoaded', function() {
+			var player = document.getElementById('player');
+	
+			// Cố gắng phát nhạc tự động ngay khi trang tải
+			player.play().catch(function(error) {
+				console.log('Autoplay bị chặn: ', error);
+			});
+		});
+
 		var targetDate = new Date('2024-10-20T00:00:00+07:00'); // UTC+7
 	
 		simplyCountdown('.simply-countdown-one', {
