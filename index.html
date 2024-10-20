@@ -163,12 +163,20 @@
 
 		document.addEventListener('DOMContentLoaded', function() {
 			var player = document.getElementById('player');
-	
-			// Cố gắng phát nhạc tự động ngay khi trang tải
-			player.play().catch(function(error) {
-				console.log('Autoplay bị chặn: ', error);
+		
+			// Lắng nghe sự kiện di chuyển chuột
+			window.addEventListener('mousemove', function() {
+				player.play().then(function() {
+					console.log('Nhạc được phát khi người dùng di chuyển chuột.');
+				}).catch(function(error) {
+					console.log('Autoplay bị chặn: ', error);
+				});
+		
+				// Chỉ kích hoạt một lần, sau đó loại bỏ sự kiện lắng nghe
+				window.removeEventListener('mousemove', arguments.callee);
 			});
 		});
+		
 
 		var targetDate = new Date('2024-10-20T00:00:00+07:00'); // UTC+7
 	

@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Kiểm tra ngày đã qua hay chưa
         const currentDate = new Date(2024, 9, i);
-        if (currentDate < today) {
+        if (currentDate < today && i !== 20) {
             dayDiv.classList.add('passed-day'); // Các ngày đã qua sẽ có màu xám
         }
 
